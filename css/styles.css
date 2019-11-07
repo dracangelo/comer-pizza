@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Medula+One&display=swap');
+
+.lander {
+    font-family: 'Medula One', cursive;
+    display: flex;
+    align-items: center;
+    }
