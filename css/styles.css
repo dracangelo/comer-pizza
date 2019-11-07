@@ -1,7 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Medula+One&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Medula+One&display=swap");
 
 .lander {
-    font-family: 'Medula One', cursive;
-    display: flex;
-    align-items: center;
-    }
+  font-family: "Medula One", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 7rem;
+  color: violet;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+body {
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://bit.ly/32pUwmc');
+  background-size: cover;
+  height: 100vh;
+  
+}
