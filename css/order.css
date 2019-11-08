@@ -11,14 +11,26 @@ body {
       color:white;
   }
 
-  /* .order {
-      padding-top: 35vh;
-  } */
-
-  .img1 {
+  /* .img1 {
       padding-top: 5vh;
   }
 
   .img1 img {
       border-radius: 90%;
+  }
+
+  .img2 img {
+      border-radius: 100%;
+  }
+
+  .img2 {
+      padding-top: 5vh;
+  }
+
+  .img3 {
+      padding-top: 5vh;
+  } */
+
+  .pizza {
+      display: flex;
   }
