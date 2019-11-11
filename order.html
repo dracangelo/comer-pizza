@@ -64,73 +64,6 @@
           </div>
         </div>
       </div>
-      <!-- <form class="form-group" id="custom-pizza">
-        <div id="form-content">
-          <div class="row container">
-            <div class="col-xs-6">
-              <p class="heeel">Size</p>
-            </div>
-            <div class="col-xs-6" class="form-option">
-              <select required class="form-control" id="size">
-                <option></option>
-                <option value="Small">Small, ksh.500"</option>
-                <option value="Medium">Medium, ksh.700"</option>
-                <option value="Large">Large, ksh.1800"</option>
-              </select>
-            </div>
-          </div>
-          <div class="row container">
-            <div class="col-xs-6">
-              <p class="heeel">Sauce</p>
-            </div>
-            <div class="col-xs-6" class="form-option">
-              <select required class="form-control" id="sauce">
-                <option></option>
-                <option value="tomato sauce">Tomato</option>
-                <option value="alfredo sauce">Alfredo</option>
-                <option value="barbacue sause">barbacue sauce</option>
-              </select>
-            </div>
-          </div>
-          <div class="row container">
-            <div class="col-xs-6">
-              <p class="heeel">Crust</p>
-            </div>
-            <div class="col-xs-6" class="form-option">
-              <select required class="form-control" id="crust">
-                <option></option>
-                <option value="Crispy">Crispy</option>
-                <option value="Gluten-free">Gluten free</option>
-                <option value="Stuffed">Stuffed</option>
-              </select>
-            </div>
-          </div>
-          <div class="row container">
-            <div class="col-xs-6">
-              <p class="heeel">topping</p>
-            </div>
-            <div class="col-xs-6" class="form-option">
-              <select required class="form-control" id="topping">
-                <option></option>
-                <option value="onions">Onions</option>
-                <option value="green peppers">Green Peppers</option>
-                <option value="olives">Black Olives</option>
-                <option value="sausage">Sausage</option>
-                <option value="Pepperoni">Pepperoni</option>
-                <option value="Chicken">Chicken</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-danger" id="submit-custom-pizza">
-          Place Order
-        </button>
-      </form> -->
-      <!-- Custom Pizza Form End -->
-      <!-- <button type="btn" class="btn btn-danger" id="checkout-btn">
-        Checkout
-      </button> -->
-      <!-- <h3><span id="delivery-option"></span></h3> -->
 
       <div class="orders" id="order">
         <h1 class="text-center" id="order-pizza">Order Pizza</h1>
@@ -139,10 +72,10 @@
           <div class="col-sm-8 order-overlay text-center">
             <form class="col-sm-6 offset-sm-3 text-center">
               <label>Pick your pizza Flavour:</label>
-              <select class="custom-select custom-select-md mb-3 flavour" required>
-                <option value="chickentikka">Chicken Tikka</option>
-                <option value="periperi">Peri-Peri Chicken</option>
-                <option value="bbq">BBQ Steak</option>
+              <select class="custom-select custom-select-md mb-3 flavour" id="flavor" required>
+                <option value="Meat deluxe">Meat deluxe</option>
+                <option value="Margherita">Margherita</option>
+                <option value="Pepperoni">Pepperoni</option>
                 <option value="hawaiian">Hawaiian</option>
                 <option value="mushroom">Chicken and Mushroom</option>
               </select>
@@ -176,8 +109,13 @@
               </select>
               <label for="number">Number of Pizza's</label>
               <input type="number" class="form-control" id="number" placeholder="Number of pizzas" min="1" max="5" required>
-
-
+              <div class="form-group" required="">
+                  <label for="sel1">Delivery option:</label>
+                  <select class="form-control" id="delivery">
+                      <option value="1">No Delivery</option>
+                      <option value="2">To be Delivered</option>
+                  </select>
+              </div>
             </form>
             <a href="#summary">
               <button type="submit" class="btn btn-success checkout" id="checkout">
@@ -229,7 +167,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
+                            <input type="text" id="message" name="subject" class="form-control">
                             <label for="subject" class="">Subject</label>
                         </div>
                     </div>

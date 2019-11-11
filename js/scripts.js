@@ -1,32 +1,39 @@
 function validateForm() {
-    var name =  document.getElementById('name').value;
-    if (name == "") {
-        document.getElementById('status').innerHTML = "Name cannot be empty";
-        return false;
+    var name =  document.getElementById('name');
+    var message=  document.getElementById('email');
+    var email=  document.getElementById('email');
+    if (name="" || email == "" || message == ""){
+        alert("please enter you details")
     }
-    var email =  document.getElementById('email').value;
-    if (email == "") {
-        document.getElementById('status').innerHTML = "Email cannot be empty";
-        return false;
-    } else {
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if(!re.test(email)){
-            document.getElementById('status').innerHTML = "Email format invalid";
-            return false;
-        }
+    else {
+        alert ("Thank you for contacting us ")
     }
-    var subject =  document.getElementById('subject').value;
-    if (subject == "") {
-        document.getElementById('status').innerHTML = "Subject cannot be empty";
-        return false;
-    }
-    var message =  document.getElementById('message').value;
-    if (message == "") {
-        document.getElementById('status').innerHTML = "Message cannot be empty";
-        return false;
-    }
-    document.getElementById('status').innerHTML = "Sending...";
-    document.getElementById('contact-form').submit();
-    
-    }
-    
+    event.preventDefault();
+
+}
+ 
+function Pizza (flavor,size,crust,toppings){
+    this.flavor = flavor,
+    this.size = size,
+    this.crust = crust,
+    this.toppings = toppings
+};
+
+Pizza.prototype.order = function() {
+    return "You have made an order of " + this.flavor + " of " + this.size + " made of " + this.crust + " and " + this.toppings
+}
+
+function Cost (price,quantity,delivery) {
+    this.price = price,
+    this.quantity = quantity,
+    this.delivery = delivery,
+};
+
+Cost.prototype.totalCost = function () {
+    return this.price + this.quantity + this.delivery
+};
+
+var sizeCost = [1050, 750, 500];
+var transport = [0, 250];
+
+document.getElementById("")
