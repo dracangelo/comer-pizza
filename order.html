@@ -70,45 +70,37 @@
         <div class="form-group row">
           <div class="col-sm-2"></div>
           <div class="col-sm-8 order-overlay text-center">
-            <form class="col-sm-6 offset-sm-3 text-center">
+            <form class="col-sm-6 offset-sm-3 text-center" id="mine">
               <label>Pick your pizza Flavour:</label>
               <select class="custom-select custom-select-md mb-3 flavour" id="flavor" required>
-                <option value="Meat deluxe">Meat deluxe</option>
-                <option value="Margherita">Margherita</option>
-                <option value="Pepperoni">Pepperoni</option>
-                <option value="hawaiian">Hawaiian</option>
-                <option value="mushroom">Chicken and Mushroom</option>
+                <option value="1">Meat deluxe</option>
+                <option value="2">Margherita</option>
+                <option value="3">Pepperoni</option>
+                <option value="4">Hawaiian</option>
+                
               </select>
               <label>Chose your preferred Size:</label>
               <select class="custom-select custom-select-md mb-3" id="size" required>
-                <option value="regular">Regular</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
+                <option value="1">Regular</option>
+                <option value="2">Medium</option>
+                <option value="3">Large</option>
               </select>
               <label for="crust">Choose your favorite Crust:</label>
               <select class="custom-select custom-select-md mb-3" id="crust" required>
-                <option value="thin">Thin Crust @ Ksh. 100</option>
-                <option value="thick">Thick Crust @ Ksh. 150</option>
-                <option value="custom">Custom Crust @ sh. 280</option>
+                <option value="1">Thin Crust @ Ksh. 100</option>
+                <option value="2">Thick Crust @ Ksh. 150</option>
+                <option value="3">Custom Crust @ sh. 280</option>
               </select>
               <label>Select Your favourite Toppings</label>
               <select class="custom-select custom-select-md mb-3" id="toppings" required>
-                <option value="tomato">Tomato @ sh. 80</option>
-                <option value="onions">Onions @ sh. 80</option>
-                <option value="mushroom">Mushroom @ sh. 80</option>
-                <option value="greenpepper">Green Pepper @ sh. 80</option>
-                <option value=""></option>
-                <option value="olives">Olives @ sh. 120</option>
-                <option value="pineapple">Pineapple @ sh. 120</option>
-                <option value="sweetcorn">Sweet Corn @ sh. 120</option>
-                <option value="macon">Macon @ sh. 120</option>
-                <option value="mince">Mince @ sh. 120</option>
-                <option value=""></option>
-                <option value="beef">Beef Peperoni @ sh. 170</option>
-                <option value="chicken">Periperi Chicken @ sh. 170</option>
+                <option value="1">Tomato @ sh. 80</option>
+                <option value="2">Onions @ sh. 80</option>
+                <option value="3">Mushroom @ sh. 80</option>
+                <option value="4">Green Pepper @ sh. 80</option>
+                
               </select>
               <label for="number">Number of Pizza's</label>
-              <input type="number" class="form-control" id="number" placeholder="Number of pizzas" min="1" max="5" required>
+              <input type="number" class="form-control" id="quantity" placeholder="Number of pizzas" min="1" max="5" required>
               <div class="form-group" required="">
                   <label for="sel1">Delivery option:</label>
                   <select class="form-control" id="delivery">
@@ -117,11 +109,9 @@
                   </select>
               </div>
             </form>
-            <a href="#summary">
-              <button type="submit" class="btn btn-success checkout" id="checkout">
+              <button type="submit" class="btn btn-success" >
                 Checkout
               </button>
-            </a>
           </div>
         </div>
       </div>
@@ -164,14 +154,7 @@
                     <!--Grid column-->
 
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" id="message" name="subject" class="form-control">
-                            <label for="subject" class="">Subject</label>
-                        </div>
-                    </div>
-                </div>
+              
                 <!--Grid row-->
 
                 <!--Grid row-->
