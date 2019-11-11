@@ -33,21 +33,21 @@ Cost.prototype.totalCost = function () {
     return this.price * this.quantity + this.delivery
 };
 
-var sizeCost = [1050, 750, 500,];
+var sizeCost = [1050, 750, 500];
 var transport = [0, 250];
 $ (document).ready(function(){
     $('form#mine').submit(function (event) {
         event.preventDefault()
-var newflavour=$('flavour').val();
-var newSize = $('size').val();
-var newCrust = $('crust').val();
+var newflavour=parseInt($('flavour').val());
+var newSize = parseInt($('size').val());
+var newCrust =parseInt( $('crust').val());
 var newToppings =$('toppings').val();
-var delivery=$('delivery').val();
+var delivery=parseInt($('delivery').val());
 var newQuantity=$('quantity').val();
 var newPrice = sizeCost[newSize-1];
 var newDelivery = transport[delivery-1]
-var newOrder = new order(newflavour,newSize,newCrust,newToppings);
-var newTotal = new totalCost(newPrice,newQuantity,newDelivery);
+var newOrder = new Pizza(newflavour,newSize,newCrust,newToppings);
+var newTotal = new Cost(newPrice,newQuantity,newDelivery);
 if(delivery===1) {
     alert(newOrder.order());
     alert(newTotal.totalCost());
@@ -57,7 +57,6 @@ else if (delivery===2) {
     alert("Delivery fee is 250 ")
     alert(newOrder.order());
     alert(newTotal.totalCost());
-
 }
 });
 });
