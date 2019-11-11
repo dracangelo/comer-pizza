@@ -3,7 +3,7 @@ body {
       url("https://bit.ly/32kJCOM");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
   }
 
   h1 {
@@ -11,48 +11,11 @@ body {
       color:white;
   }
 
-  /* .img1 {
-      padding-top: 5vh;
+  #order {
+      width: 90%;
+      color: white;
   }
 
-  .img1 img {
-      border-radius: 90%;
-  }
-
-  .img2 img {
-      border-radius: 100%;
-  }
-
-  .img2 {
-      padding-top: 5vh;
-  }
-
-  .img3 {
-      padding-top: 5vh;
-  } */
-
-  .pizza {
-      display: flex;
-  }
-
-  /* #custom-pizza {
-      width: 500px;
-  } */
-
-
-
-  #size {
-      width: 500px;
-  }
-
-  #sauce {
-      width: 500px;
-  }
-
-  #crust {
-      width: 500px;
-  }
-
-  #topping {
-      width: 500px;
+  .footer {
+      color:pink;
   }

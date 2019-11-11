@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,9 +14,7 @@
     <div class="container-fluid">
       <div class="container-fluid homep"></div>
       <div class="container-fluid order">
-        <a href="index.html"
-          ><button class="btn btn-primary" type="submit">back home</button></a
-        >
+        <a href="index.html"><button class="btn btn-primary" type="submit">back home</button></a>
       </div>
       <div class="container-fluid gd">
         <h1>A slice a day keeps the sad away.</h1>
@@ -23,12 +22,7 @@
       <div class="container-fluid pizza row">
         <div class="container-fluid col-md-2 col-lg-3 col-sm-1 p-2 mx-auto">
           <div class="card" style="width: 18rem;">
-            <img
-              src="https://bit.ly/2CmZoOr"
-              class="card-img-top"
-              alt="large"
-              height="250px"
-            />
+            <img src="https://bit.ly/2CmZoOr" class="card-img-top" alt="large" height="250px" />
             <div class="card-body">
               <h5 class="card-title">meat deluxe</h5>
               <p class="card-text">
@@ -42,12 +36,7 @@
         </div>
         <div class="container-fluid col-md-2 col-lg-3 col-sm-1 p-2 mx-auto">
           <div class="card" style="width: 18rem;">
-            <img
-              src="https://bit.ly/2qyBhK7"
-              class="card-img-top"
-              alt="large"
-              height="250px"
-            />
+            <img src="https://bit.ly/2qyBhK7" class="card-img-top" alt="large" height="250px" />
             <div class="card-body">
               <h5 class="card-title">Margherita</h5>
               <p class="card-text">
@@ -61,12 +50,7 @@
         </div>
         <div class="container-fluid col-md-2 col-lg-3 col-sm-1 p-2 mx-auto">
           <div class="card" style="width: 18rem;">
-            <img
-              src="https://bit.ly/2K37U9C"
-              class="card-img-top"
-              alt="large"
-              height="250px"
-            />
+            <img src="https://bit.ly/2K37U9C" class="card-img-top" alt="large" height="250px" />
             <div class="card-body">
               <h5 class="card-title">Pepperoni</h5>
               <p class="card-text">
@@ -80,7 +64,7 @@
           </div>
         </div>
       </div>
-      <form class="form-group" id="custom-pizza">
+      <!-- <form class="form-group" id="custom-pizza">
         <div id="form-content">
           <div class="row container">
             <div class="col-xs-6">
@@ -141,14 +125,168 @@
         <button type="submit" class="btn btn-danger" id="submit-custom-pizza">
           Place Order
         </button>
-      </form>
+      </form> -->
       <!-- Custom Pizza Form End -->
-      <button type="btn" class="btn btn-danger" id="checkout-btn">
+      <!-- <button type="btn" class="btn btn-danger" id="checkout-btn">
         Checkout
-      </button>
-      <h3><span id="delivery-option"></span></h3>
+      </button> -->
+      <!-- <h3><span id="delivery-option"></span></h3> -->
+
+      <div class="orders" id="order">
+        <h1 class="text-center" id="order-pizza">Order Pizza</h1>
+        <div class="form-group row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8 order-overlay text-center">
+            <form class="col-sm-6 offset-sm-3 text-center">
+              <label>Pick your pizza Flavour:</label>
+              <select class="custom-select custom-select-md mb-3 flavour" required>
+                <option value="chickentikka">Chicken Tikka</option>
+                <option value="periperi">Peri-Peri Chicken</option>
+                <option value="bbq">BBQ Steak</option>
+                <option value="hawaiian">Hawaiian</option>
+                <option value="mushroom">Chicken and Mushroom</option>
+              </select>
+              <label>Chose your preferred Size:</label>
+              <select class="custom-select custom-select-md mb-3" id="size" required>
+                <option value="regular">Regular</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+              <label for="crust">Choose your favorite Crust:</label>
+              <select class="custom-select custom-select-md mb-3" id="crust" required>
+                <option value="thin">Thin Crust @ Ksh. 100</option>
+                <option value="thick">Thick Crust @ Ksh. 150</option>
+                <option value="custom">Custom Crust @ sh. 280</option>
+              </select>
+              <label>Select Your favourite Toppings</label>
+              <select class="custom-select custom-select-md mb-3" id="toppings" required>
+                <option value="tomato">Tomato @ sh. 80</option>
+                <option value="onions">Onions @ sh. 80</option>
+                <option value="mushroom">Mushroom @ sh. 80</option>
+                <option value="greenpepper">Green Pepper @ sh. 80</option>
+                <option value=""></option>
+                <option value="olives">Olives @ sh. 120</option>
+                <option value="pineapple">Pineapple @ sh. 120</option>
+                <option value="sweetcorn">Sweet Corn @ sh. 120</option>
+                <option value="macon">Macon @ sh. 120</option>
+                <option value="mince">Mince @ sh. 120</option>
+                <option value=""></option>
+                <option value="beef">Beef Peperoni @ sh. 170</option>
+                <option value="chicken">Periperi Chicken @ sh. 170</option>
+              </select>
+              <label for="number">Number of Pizza's</label>
+              <input type="number" class="form-control" id="number" placeholder="Number of pizzas" min="1" max="5" required>
+
+
+            </form>
+            <a href="#summary">
+              <button type="submit" class="btn btn-success checkout" id="checkout">
+                Checkout
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer container-fluid">
+        <footer>
+          <!--Section: Contact v.2-->
+<section class="mb-4">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+        a matter of hours to help you.</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control" required>
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control" required>
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <a class="btn btn-primary" onclick="validateForm()">Send</a>
+            </div>
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Westlands</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+ 254727281923</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>comerpizza@yahoo.com</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
+        </footer>
+      </div>
     </div>
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/scripts.js"></script>
   </body>
+
 </html>
