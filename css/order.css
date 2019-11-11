@@ -34,3 +34,25 @@ body {
   .pizza {
       display: flex;
   }
+
+  /* #custom-pizza {
+      width: 500px;
+  } */
+
+
+
+  #size {
+      width: 500px;
+  }
+
+  #sauce {
+      width: 500px;
+  }
+
+  #crust {
+      width: 500px;
+  }
+
+  #topping {
+      width: 500px;
+  }
