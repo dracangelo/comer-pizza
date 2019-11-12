@@ -12,57 +12,66 @@ function validateForm() {
 
 }
  
-function Pizza (flavor,size,crust,toppings){
-    this.flavor = flavor;
+
+function Order(type, size, crust, topping) {
+    this.type = type;
     this.size = size;
     this.crust = crust;
-    this.toppings = toppings;
-};
-
-Pizza.prototype.order = function() {
-    return "You have made an order of " + this.flavor + " of " + this.size + " made of " + this.crust + " and " + this.toppings
+    this.topping = topping;
 }
 
-function Cost (price,quantity,delivery,toppings,crust) {
+Order.prototype.new= function () {
+    return this.type + " with the crust of " + this.crust + " and " + this.topping + " as topping.";
+};
+
+function Total(price, quantity, delivery) {
     this.price = price;
     this.quantity = quantity;
     this.delivery = delivery;
-    this.toppings = toppings;
-    this.crust = crust;
+}
+
+Total.prototype.finalTotal = function () {
+    return this.price * this.quantity + this.delivery;
 };
 
-Cost.prototype.totalCost = function () {
-    return (this.price + this.delivery + this.toppings + this.crust) * this.quantity 
-};
 
-var sizeCost = [1050, 750, 500];
-var transport = [0, 250];
-var crustPrices = [100,150,280]
-var toppingsCost = [80,80,80,80]
-var toppingsNames = ["Tomato", "Mushroom", "Green pepper", "Onion"]
-var crustNames = ["Thin crust", "Thick crust", "Custom crust"]
-$ (document).ready(function(){
-    $('form#mine').submit(function (event) {
-        event.preventDefault()
-var newflavour=parseInt($('flavour').val());
-var newSize = parseInt($('size').val());
-var newCrust =parseInt( $('crust').val());
-var newToppings =$('toppings').val();
-var delivery=parseInt($('delivery').val());
-var newQuantity=$('quantity').val();
-var newPrice = sizeCost[newSize-1];
-var newDelivery = transport[delivery-1]
-var newOrder = new Pizza(newflavour,newSize,newCrust,newToppings);
-var newTotal = new Cost(newPrice,newQuantity,newDelivery);
-if(delivery===1) {
-    alert(newOrder.order());
-    alert("your bill is:" + newTotal.totalCost());
-}
-else if (delivery===2) { 
-    prompt("please enter destination");
-    alert("Delivery fee is 250 ")
-    alert(newOrder.order());
-    alert(newTotal.totalCost());
-}
+var sizePrice = [1500, 1000, 800]
+var deliverPrices = [0, 200];
+$(document).ready(function () {
+    $('#mine').submit(function (event) {
+        var pizzaType = $('#type').val();
+        var pizzaSize = parseInt($('#size').val());
+        var pizzaCrust = $('#crust').val();
+        var pizzaTop = $('#top').val();
+        var pizzaQty = parseInt($('#qty').val());
+        var pizzaPick = parseInt($('#pick').val());
+        var price = sizePrice[pizzaSize - 1];
+        var DeliveryCost = deliverPrices[pizzaPick - 1];
+
+
+
+        newOrder = new Order(pizzaType, pizzaSize, pizzaCrust, pizzaTop);
+        newTotal = new Total(price, pizzaQty, DeliveryCost);
+        if (pizzaPick===1){
+        alert("Your oder is: " + newOrder.new() + ".continue to see your total bill");
+        alert("your bill is: " + newTotal.finalTotal());
+        }else{
+            if(pizzaPick===2){
+                prompt("Enter where you want your pizza to be delivered");
+                alert("Your oder is: " + newOrder.new() + ".continue to see your total bill");
+                alert("your bill is: " + newTotal.finalTotal());
+            }
+        }
+        event.preventDefault();
+
+    });
 });
-});
+
+
+
+
+
+
+
+
+

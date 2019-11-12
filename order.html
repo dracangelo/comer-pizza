@@ -65,54 +65,64 @@
         </div>
       </div>
 
-      <div class="orders" id="order">
-        <h1 class="text-center" id="order-pizza">Order Pizza</h1>
-        <div class="form-group row">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-8 order-overlay text-center">
-            <form class="col-sm-6 offset-sm-3 text-center" id="mine">
-              <label>Pick your pizza Flavour:</label>
-              <select class="custom-select custom-select-md mb-3 flavour" id="flavor" required>
-                <option value="1">Meat deluxe</option>
-                <option value="2">Margherita</option>
-                <option value="3">Pepperoni</option>
-                <option value="4">Hawaiian</option>
-                
-              </select>
-              <label>Chose your preferred Size:</label>
-              <select class="custom-select custom-select-md mb-3" id="size" required>
-                <option value="1">Regular</option>
-                <option value="2">Medium</option>
-                <option value="3">Large</option>
-              </select>
-              <label for="crust">Choose your favorite Crust:</label>
-              <select class="custom-select custom-select-md mb-3" id="crust" required>
-                <option value="1">Thin Crust @ Ksh. 100</option>
-                <option value="2">Thick Crust @ Ksh. 150</option>
-                <option value="3">Custom Crust @ sh. 280</option>
-              </select>
-              <label>Select Your favourite Toppings</label>
-              <select class="custom-select custom-select-md mb-3" id="toppings" required>
-                <option value="1">Tomato @ sh. 80</option>
-                <option value="2">Onions @ sh. 80</option>
-                <option value="3">Mushroom @ sh. 80</option>
-                <option value="4">Green Pepper @ sh. 80</option>
-                
-              </select>
-              <label for="number">Number of Pizza's</label>
-              <input type="number" class="form-control" id="quantity" placeholder="Number of pizzas" min="1" max="5" required>
-              <div class="form-group" required="">
-                  <label for="sel1">Delivery option:</label>
-                  <select class="form-control" id="delivery">
-                      <option value="1">No Delivery</option>
-                      <option value="2">To be Delivered</option>
-                  </select>
-              </div>
-            </form>
-              <button type="submit" class="btn btn-success" >
-                Checkout
-              </button>
-          </div>
+      
+        <div class="row">
+            <div class="col-md-4 mx-auto py-2">
+                <form id = "mine">
+                    <div class="form-group">
+                        <label for="sel1">Select type:</label>
+                        <select class="form-control" id="type">
+                            <option>Margherita</option>
+                            <option>Calzone</option>
+                            <option>Stromboli</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">Select size:</label>
+                        <select class="form-control" id="size">
+                            <option value="1">large---1500</option>
+                            <option value="2">Regular---1000</option>
+                            <option value="3">Small---800</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">Select crust:</label>
+                        <select class="form-control" id="crust">
+                            <option>Cripsy</option>
+                            <option>Stuffed</option>
+                            <option>Gluten-free</option>
+                            
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">Select topping:</label>
+                        <select class="form-control" id="top">
+                            <option>Pepperoni</option>
+                            <option>onions</option>
+                            <option>Sausage</option>
+                            <option>Bacon</option>
+                        </select>
+                    </div>
+                    <div class="form-group" required>
+                        <label for="sel1">Quantity:</label>
+                        <input type="number" id="qty" class="form-control" min="1" required>
+                    </div>
+                    <div class="form-group" required="">
+                        <label for="sel1">Delivery option:</label>
+                        <select class="form-control" id="pick">
+                            <option value="1">I Will come Get it</option>
+                            <option value="2"> Please Delivered</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+
+                        <button type="submit" class="btn btn-success btn-block">checkout</button>
+
+                    </div>
+                </form>
+            </div>
+
         </div>
       </div>
       <div class="footer container-fluid">
@@ -204,6 +214,17 @@
 </section>
 <!--Section: Contact v.2-->
         </footer>
+      </div>
+      <div class="row pt-3">
+          <div class="col-10">
+              <div class="row justify-content-center footer">
+                  <img src="images/facebook.png" class="p-2 pointer">
+                  <img src="images/skype.png" class="p-2 pointer">
+                  <img src="images/twitter.png" class="p-2 pointer">
+                  <img src="images/you_tube.png" class="p-2 pointer">
+              </div>
+              <p style="text-align:center;"><br> &copy; </p>
+          </div>
       </div>
     </div>
     <script src="js/jquery-3.4.1.js"></script>
