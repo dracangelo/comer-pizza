@@ -17,7 +17,7 @@
 ## BDD
 > The undertaking result ought to help you order pizza.
 ## Project Screenshots
--
+-<img src="images/drax.jpg" height= 300px>
 - This is the landing page of the website.
 ## Technologies Used
 - html
